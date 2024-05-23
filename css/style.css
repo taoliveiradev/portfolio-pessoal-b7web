@@ -1,0 +1,645 @@
+:root {
+  --background: #FFF;
+  --foreground: #6E07F3;
+  --primary: #141c3a;
+  --primary-light: #cdd3eb;
+  --primary-foreground: #FFF;
+  --secondary: #5be8b9;
+  --secondary-foreground: #141c3a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 62.5%;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.button {
+  display: inline-block;
+  border: 0.2rem solid var(--foreground);
+  color: var(--foreground);
+  border-radius: 1.5rem;
+  padding: 0.8rem 1.5rem;
+  transition: all ease .2s;
+}
+
+.button:hover {
+  background-color: var(--foreground);
+  color: var(--primary-foreground);
+}
+
+.collab {
+  background-color: var(--foreground);
+  color: var(--primary-foreground);
+  padding: 8rem 2rem;
+  text-align: center;
+}
+
+.collab .title {
+  font-weight: bold;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.collab .subtitle {
+  font-size: 1.7rem;
+  line-height: 2.2rem;
+  margin-bottom: 3rem;
+}
+
+.collab .button {
+  border-color: var(--background);
+  color: var(--background);
+  font-size: 2rem;
+  text-decoration: none;
+}
+
+.collab .button:hover {
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+.cta {
+  background-color: var(--foreground);
+}
+
+.cta .overlay {
+  background-color: var(--background);
+  height: 6rem;
+}
+
+.cta .container {
+  margin-top: -6rem;
+}
+
+.cta .area {
+  margin: 0 2rem;
+  padding: 4rem;
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+  border-radius: 1.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  align-items: center;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, .5);
+}
+
+.cta .area-side {
+  flex: 1;
+}
+
+.cta .title {
+  font-weight: bold;
+  font-size: 3rem;
+}
+
+.cta .subtitle {
+  font-size: 1.8rem;
+  line-height: 2.5rem;
+}
+
+.cta .button {
+  font-size: 2rem;
+  color: var(--background);
+  text-decoration: none;
+}
+
+footer {
+  background-color: var(--foreground);
+  color: var(--primary-light);
+  padding: 6rem 2rem;
+  text-align: center;
+}
+
+footer .logo {
+  width: 4rem;
+  height: auto;
+  margin-bottom: 4rem;
+}
+
+footer .title {
+  font-size: 2.2rem;
+  line-height: 3rem;
+  margin-bottom: 4rem;
+}
+
+footer .social {
+  display: flex;
+  justify-content: space-between;
+  max-width: 40rem;
+  margin: auto;
+  margin-bottom: 4rem;
+}
+
+footer .social a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  border: 0.2rem solid var(--primary-light);
+}
+
+footer .social a img {
+  width: 2rem;
+  height: 2rem;
+}
+
+footer .social a:hover {
+  opacity: .8;
+}
+
+footer .copyright {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+footer .legal {
+  font-size: 1.5rem;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.navbar {
+  flex: 1;
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo img {
+  width: 3.2rem;
+  height: 3.2rem;
+}
+
+.menu-opener {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  width: 3.2rem;
+  height: 3.2rem;
+  cursor: pointer;
+}
+
+.menu-opener span {
+  display: block;
+  width: 2rem;
+  height: 0.1rem;
+  background-color: var(--primary);
+}
+
+header nav {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+header nav a {
+  font-size: 1.4rem;
+  text-decoration: none;
+  color: var(--primary);
+}
+
+header nav.opened {
+  display: flex;
+}
+
+.hero {
+  text-align: center;
+  padding: 3rem 1rem 0 1rem;
+}
+
+.hero h1 {
+  font-weight: bold;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.hero h2 {
+  font-weight: normal;
+  font-size: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.hero-avatar {
+  display: block;
+  width: 12rem;
+  height: auto;
+  margin: auto;
+  margin-bottom: 5rem;
+}
+
+.hero-device {
+  display: block;
+  width: 100%;
+  max-width: 80rem;
+  height: auto;
+  margin: auto;
+}
+
+.intro {
+  background-color: var(--foreground);
+  color: var(--primary-foreground);
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.intro .box {
+  max-width: 60rem;
+  margin: auto;
+  padding: 2rem;
+}
+
+.intro .title {
+  font-weight: bold;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.intro .subtitle {
+  font-size: 1.8rem;
+  line-height: 3rem;
+}
+
+.recent-work {
+  text-align: center;
+  color: var(--primary);
+  padding: 0 2rem;
+}
+
+.recent-work .title {
+  font-weight: bold;
+  font-size: 2.5rem;
+  margin-top: 8rem;
+  margin-bottom: 3.5rem;
+}
+
+.recent-work .subtitle {
+  font-size: 2rem;
+  line-height: 3rem;
+}
+
+.recent-work .subtitle a {
+  color: var(--foreground);
+  text-decoration: none;
+}
+
+.recent-work .subtitle a:hover {
+  text-decoration: underline;
+}
+
+.recent-work .grid {
+  margin-top: 5rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+
+/* GRID ITEM */
+.recent-work .item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1.5rem;
+}
+
+.recent-work .item .image {
+  width: 100%;
+  height: auto;
+  transition: all ease .5s;
+}
+
+.recent-work .item .overlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  inset: 0 0 0 0;
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+  padding: 2rem;
+  font-size: 1.9rem;
+  line-height: 2.5rem;
+  transition: all ease .5s;
+  opacity: 0;
+}
+
+.recent-work .item .overlay .button {
+  margin-top: 2rem;
+  color: var(--primary-foreground);
+  text-decoration: none;
+}
+
+.recent-work .item:hover .image {
+  transform: scale(1.2);
+}
+
+.recent-work .item:hover .overlay {
+  opacity: 1;
+}
+
+.recent-work .seemore {
+  margin: 6rem 0;
+  font-size: 2rem;
+  text-decoration: none;
+}
+
+.skills-overlay {
+  background-color: var(--foreground);
+  height: 10rem;
+}
+
+.skills .container {
+  margin-top: -10rem;
+}
+
+.skills .grid {
+  background-color: var(--background);
+  margin: 0 2rem;
+  border-radius: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  box-shadow: 0 3px 5px var(--primary-light);
+}
+
+.skills .skill {
+  text-align: center;
+  border-right: 0;
+  border-bottom: 1px solid var(--primary-light);
+  color: var(--primary);
+  padding: 5rem 2rem;
+}
+
+.skills .skill:last-child {
+  border-right: 0;
+  border-bottom: 0;
+}
+
+
+/* SKILL ITEM */
+.skill-icon {
+  width: 7rem;
+  height: 7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: var(--secondary);
+  color: var(--secondary-foreground);
+  margin: auto;
+}
+
+.skill-icon img {
+  width: 4rem;
+  height: 4rem;
+}
+
+.skill-title {
+  font-weight: bold;
+  font-size: 2rem;
+  margin: 3rem 0;
+}
+
+.skill-desc {
+  font-size: 1.7rem;
+  line-height: 2.5rem;
+}
+
+.skill-sub {
+  margin-top: 5rem;
+  margin-bottom: 1rem;
+  font-size: 1.7rem;
+  color: var(--foreground);
+}
+
+.skill-txt {
+  font-size: 1.7rem;
+  line-height: 2.5rem;
+}
+
+.testimonials {
+  padding: 8rem 2rem;
+  text-align: center;
+  color: var(--primary);
+}
+
+.testimonials .title {
+  font-weight: bold;
+  font-size: 2.5rem;
+  line-height: 3rem;
+  margin-bottom: 3rem;
+}
+
+.testimonials .subtitle {
+  font-size: 2rem;
+  line-height: 2.5rem;
+  margin-bottom: 4rem;
+}
+
+.testimonials .slider {
+  max-width: 50rem;
+  overflow-x: hidden;
+  margin: auto;
+}
+
+.testimonials .slider input {
+  display: none;
+}
+
+.testimonials .slider-area {
+  width: 200%;
+  display: flex;
+  transition: all ease .5s;
+}
+
+.testimonials .slider-item {
+  width: 100%;
+}
+
+.testimonials .slider-item img {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 4rem;
+}
+
+.testimonials .slider-item .description {
+  font-size: 2rem;
+  line-height: 3.3rem;
+  margin-bottom: 4rem;
+}
+
+.testimonials .slider-item .name {
+  font-weight: bold;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.testimonials .slider-item .role {
+  font-size: 1.7rem;
+}
+
+.testimonials .slider-nav {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 4rem;
+}
+
+.testimonials .slider-nav label {
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 0.2rem solid var(--primary-light);
+  transition: all ease .5s;
+}
+
+#slider-1:checked~.slider-area {
+  margin-left: 0%;
+}
+
+#slider-2:checked~.slider-area {
+  margin-left: -100%;
+}
+
+#slider-1:checked~.slider-nav .n1 {
+  background-color: var(--foreground);
+}
+
+#slider-2:checked~.slider-nav .n2 {
+  background-color: var(--foreground);
+}
+
+.worked-with {
+  border-top: 0.1rem solid var(--primary-light);
+  padding: 8rem 2rem;
+  text-align: center;
+  color: var(--primary);
+}
+
+.worked-with .title {
+  font-weight: bold;
+  font-size: 2rem;
+  line-height: 2.5rem;
+}
+
+.worked-with .grid {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.worked-with .grid img {
+  width: 100%;
+}
+
+@media (width > 600px) {
+  .worked-with .title {
+      font-size: 3.5rem;
+      line-height: 4rem;
+  }
+
+  .worked-with .grid {
+      grid-template-columns: repeat(3, 1fr);
+  }
+
+  .skills .grid {
+      grid-template-columns: repeat(3, 1fr);
+  }
+
+  .skills .skill {
+      border-bottom: 0;
+      border-right: 1px solid var(--primary-light);
+  }
+
+  .recent-work .title {
+      font-size: 3.5rem;
+  }
+
+  .recent-work .grid {
+      grid-template-columns: repeat(2, 1fr);
+  }
+
+  .intro .title {
+      font-size: 3rem;
+  }
+
+  .hero h1 {
+      font-size: 4rem;
+  }
+
+  .hero h2 {
+      font-size: 2rem;
+  }
+
+  .hero-avatar {
+      width: 20rem;
+  }
+
+  header {
+      flex-direction: row;
+  }
+
+  .menu-opener {
+      display: none;
+  }
+
+  header nav {
+      display: flex;
+      flex-direction: row;
+  }
+
+  .collab .title {
+      font-size: 3rem;
+      line-height: 3.5rem;
+  }
+
+  .collab .subtitle {
+      font-size: 2rem;
+      line-height: 2.5rem;
+  }
+}
+
+@media (width > 900px) {
+  .worked-with .grid {
+      grid-template-columns: repeat(4, 1fr);
+  }
+
+  .recent-work .grid {
+      grid-template-columns: repeat(3, 1fr);
+  }
+
+  .cta .area {
+      flex-direction: row;
+  }
+}
